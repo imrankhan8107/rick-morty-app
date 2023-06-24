@@ -10,6 +10,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card";
 import "../styles/characters.css";
+import { Select, Input, Button } from "antd";
+const { Option } = Select;
 
 export default function Characters() {
   const dispatch = useDispatch();
@@ -37,24 +39,32 @@ export default function Characters() {
   return (
     <div className="characters-page">
       <div>
-        <input
+        <Input
           type="text"
           placeholder="Search by name"
           onKeyDown={handleNameChange}
         />
-        <select value={character_status} onChange={handleStatusChange}>
-          <option value="">All</option>
-          <option value="alive">Alive</option>
-          <option value="dead">Dead</option>
-          <option value="unknown">Unknown</option>
-        </select>
-        <select value={gender} onChange={handleGenderChange}>
-          <option value="">All</option>
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="genderless">Genderless</option>
-          <option value="unknown">Unknown</option>
-        </select>
+        <Select
+          value={character_status}
+          onChange={handleStatusChange}
+          style={{ width: 100 }}
+        >
+          <Option value="alive">Alive</Option>
+          <Option value="dead">Dead</Option>
+          <Option value="">All</Option>
+          <Option value="unknown">Unknown</Option>
+        </Select>
+        <Select
+          value={gender}
+          onChange={handleGenderChange}
+          style={{ width: 100 }}
+        >
+          <Option value="">All</Option>
+          <Option value="female">Female</Option>
+          <Option value="male">Male</Option>
+          <Option value="genderless">Genderless</Option>
+          <Option value="unknown">Unknown</Option>
+        </Select>
       </div>
       <div className="characters">
         {characters.map((character) => {
@@ -84,22 +94,22 @@ export default function Characters() {
           return <Card key={character.id} character={character} />;
         })}
       </div>
-      <div>
-        <button
+      <div className="pagination">
+        <Button
           onClick={() => {
             dispatch(nextPage());
           }}
         >
           Next Page
-        </button>
-        {page}
-        <button
+        </Button>
+        <span className="page-no">{page}</span>
+        <Button
           onClick={() => {
             dispatch(prevPage());
           }}
         >
           Previous Page
-        </button>
+        </Button>
       </div>
     </div>
   );

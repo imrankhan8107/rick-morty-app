@@ -12,6 +12,15 @@
   background: #eee2de;
 }
 
+.pagination {
+  margin: 1rem;
+}
+
+.page-no {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
 @media (min-width: 576px) and (max-width: 768px) {
   .characters {
     grid-template-columns: repeat(3, 1fr);
