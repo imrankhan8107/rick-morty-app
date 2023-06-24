@@ -84,21 +84,23 @@ export default function Characters() {
           return <Card key={character.id} character={character} />;
         })}
       </div>
-      <button
-        onClick={() => {
-          dispatch(nextPage());
-        }}
-      >
-        Next Page
-      </button>
-      {page}
-      <button
-        onClick={() => {
-          dispatch(prevPage());
-        }}
-      >
-        Previous Page
-      </button>
+      <div>
+        <button
+          onClick={() => {
+            dispatch(nextPage());
+          }}
+        >
+          Next Page
+        </button>
+        {page}
+        <button
+          onClick={() => {
+            dispatch(prevPage());
+          }}
+        >
+          Previous Page
+        </button>
+      </div>
     </div>
   );
 }
