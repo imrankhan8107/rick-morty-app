@@ -1,0 +1,25 @@
+.characters-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.characters {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #eee2de;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .characters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .characters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

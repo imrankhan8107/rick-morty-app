@@ -1,0 +1,9 @@
+.character-card {
+  border: 1px solid black;
+  background: #ea906c;
+  padding: 1rem;
+  margin-right: 0.5rem;
+  margin: 1rem;
+  color: #2b2a4c;
+  border-radius: 20px;
+}
