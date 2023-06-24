@@ -1,8 +1,23 @@
-# Getting Started with Create React App
+# Project: Rick & Morty App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requiremments:
+    - Using https://rickandmortyapi.com/documentation/ API to show the Rick and Morty chatracters in the App
+    - Filters on characters for fields: name in free text, status and gender as dropdown
+    - having a characcter details page
+    - Using Ant Design
+    - Deploying the site
+
+## About Project
+This Web App is made using React, it uses Ant design with the library `antd`. 
+Dropdown and input field are added for filtering. 
+After Filtering, an API call is made with respect to get the charcaters according to the filter.
 
 ## Available Scripts
+To import Project directory:
+`git clone https://github.com/imrankhan8107/trello_management.git`
+
+After importing, run the command:
+`npm install`  => this is to install the node modules
 
 In the project directory, you can run:
 
